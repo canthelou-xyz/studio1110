@@ -1,0 +1,14 @@
+{
+  "name": "studio1110",
+  "version": "1.0.0",
+  "description": "Mes fiches de travail",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "author": "Pierre Canthelou",
+  "license": "CC0-1.0",
+  "devDependencies": {
+    "electron-prebuilt": "^1.2.0"
+  }
+}

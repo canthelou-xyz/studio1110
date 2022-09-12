@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Fiche de travail</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.3.1/css/swiper.min.css'>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+        </div>
+        <div class="swiper-pagination"></div>
+    </div>
+
+    <script id="article-template" type="text/x-handlebars-template">
+        {{#each articles}}
+        <article class="processus swiper-slide" id="{{id}}" data-duration="{{duration}}">
+            <h2><strong>{{name}}</strong> <span></span></h2>
+            <ul>
+                {{#each tasks}}
+                <li>
+                    <div class="numero"><strong>{{inc @index}}</strong></div>
+                    <div class="tache">
+                        <h3>{{name}}</h3>
+                        <p>{{#each text}}{{this}}{{#if @last}}{{ else }}
+                            <br>{{/if}}{{/each}}</p>
+                    </div>
+                </li>
+                {{/each}}
+            </ul>
+        </article>
+        {{/each}}
+    </script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.min.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.3.1/js/swiper.min.js'></script>
+    <script src="js/index.js"></script>
+</body>
+</html>
